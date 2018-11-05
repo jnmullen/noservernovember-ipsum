@@ -1,0 +1,15 @@
+service: noservernovember-ipsum
+
+provider:
+  name: aws
+  runtime: go1.x
+
+package:
+ exclude:
+   - ./**
+ include:
+   - ./bin/**
+
+functions:
+  ipsupm:
+    handler: bin/ipsum
