@@ -1,8 +1,7 @@
 package main
 
 import (
-	"github.com/aws/aws-lambda-go/lambda",
-	"github.com/kivlor/it-crowd-ipsum"
+	"github.com/aws/aws-lambda-go/lambda"
 )
 
 type Response struct {
