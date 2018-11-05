@@ -13,3 +13,9 @@ package:
 functions:
   ipsupm:
     handler: bin/ipsum
+    events:
+       - http:
+          url: ipsum
+          method: GET
+
+
