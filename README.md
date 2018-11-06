@@ -17,7 +17,17 @@ To try out this example you will need to install the Serverless Framework for yo
 
 Assume you have created a file with your AWS credentials in __~./aws/credentials__ as the Serverless Framework will require these to be able to run.
 
+Assumes you have dep installed from here [dep install](https://github.com/golang/dep)
+
 ### Running Serverless Framework
+
+Assume you have created a file with your AWS credentials in __~./aws/credentials__ as the Serverless Framework will require these to be able to run.
+
+To build the required executable run:
+
+```
+make
+```
 
 To create the infrastructure run:
 ```
