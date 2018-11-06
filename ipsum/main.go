@@ -2,16 +2,11 @@ package main
 
 import (
 	"github.com/aws/aws-lambda-go/lambda"
+	"github.com/aws/aws-lambda-go/events"
 )
 
-type Response struct {
-	Message string `json:"message"`
-}
-
-func Handler() (Response, error) {
-	return Response{
-		Message: "Go Serverless v1.0! Your function executed successfully!",
-	}, nil
+func Handler(request events.APIGatewayProxyRequest)(events.APIGatewayProxyResponse, error) {
+	return events.APIGatewayProxyResponse{ Body: "Go Serverless v1.0! Your function executed successfully!", StatusCode: 200 },nil
 }
 
 func main() {
