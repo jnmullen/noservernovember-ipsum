@@ -3,10 +3,13 @@ package main
 import (
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-lambda-go/events"
+	"gopkg.in/loremipsum.v1"
 )
 
+var  loremGenerator = loremipsum.New()
+
 func Handler(request events.APIGatewayProxyRequest)(events.APIGatewayProxyResponse, error) {
-	return events.APIGatewayProxyResponse{ Body: "Go Serverless v1.0! Your function executed successfully!", StatusCode: 200 },nil
+	return events.APIGatewayProxyResponse{ Body: loremGenerator.Sentence(), StatusCode: 200 },nil
 }
 
 func main() {

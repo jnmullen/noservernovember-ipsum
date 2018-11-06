@@ -24,9 +24,13 @@ Assumes you have dep installed from here [dep install](https://github.com/golang
 Assume you have created a file with your AWS credentials in __~./aws/credentials__ as the Serverless Framework will require these to be able to run.
 
 To build the required executable run:
-
 ```
 make
+```
+
+To execute the tests run:
+```
+make test
 ```
 
 To create the infrastructure run:
