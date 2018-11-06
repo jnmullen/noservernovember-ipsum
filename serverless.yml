@@ -3,6 +3,8 @@ service: noservernovember-ipsum
 provider:
   name: aws
   runtime: go1.x
+  region: eu-west-1
+  stage: ${opt:stage, 'development'}
 
 package:
  exclude:
